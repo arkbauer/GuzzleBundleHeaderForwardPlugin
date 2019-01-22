@@ -4,6 +4,7 @@ namespace EncoreLabs\Bundle\GuzzleBundleHeaderForwardPlugin;
 
 use GuzzleHttp\Client;
 use Psr\Http\Message\RequestInterface;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 class GuzzleForwardHeaderMiddleware
@@ -42,15 +43,19 @@ class GuzzleForwardHeaderMiddleware
                 return $handler;
             }
 
-            if ($currentRequest = $this->requestStack->getCurrentRequest()) {
-                foreach ($this->headers as $header) {
-                    if ($currentRequest->headers->has($header)) {
-                        $request = $request->withHeader($header, $currentRequest->headers->get($header));
-                    }
-                }
+            $currentRequest = $this->requestStack->getCurrentRequest();
 
-                return $handler($request, $options);
+            if (!$currentRequest) {
+                $currentRequest = new Request();
             }
+
+            foreach ($this->headers as $header) {
+                if ($currentRequest->headers->has($header)) {
+                    $request = $request->withHeader($header, $currentRequest->headers->get($header));
+                }
+            }
+
+            return $handler($request, $options);
         };
     }
 }

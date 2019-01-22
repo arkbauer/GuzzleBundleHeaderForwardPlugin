@@ -1,4 +1,4 @@
-# Guzzle Bundle Header Forwarding Plugin
+\# Guzzle Bundle Header Forwarding Plugin
 
 This plugin integrates a way to forward headers from the current symfony request into the cURL.
 
@@ -15,14 +15,14 @@ Using [composer][2]:
 ``` json
 {
     "require": {
-        "neirda24/guzzle-bundle-header-forward-plugin": "^1.0"
+        "encore-labs/guzzle-bundle-header-forward-plugin": "^1.0"
     }
 }
 ```
 
 ##### command line
 ``` bash
-$ composer require neirda24/guzzle-bundle-header-forward-plugin
+$ composer require encore-labs/guzzle-bundle-header-forward-plugin
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ $ composer require neirda24/guzzle-bundle-header-forward-plugin
 # app/AppKernel.php
 
 new EightPoints\Bundle\GuzzleBundle\EightPointsGuzzleBundle([
-    new Neirda24\Bundle\GuzzleBundleHeaderForwardPlugin\GuzzleBundleHeaderForwardPlugin(),
+    new EncoreLabs\Bundle\GuzzleBundleHeaderForwardPlugin\GuzzleBundleHeaderForwardPlugin(),
 ])
 ```
 

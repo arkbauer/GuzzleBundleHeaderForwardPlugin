@@ -1,6 +1,6 @@
 <?php
 
-namespace Neirda24\Bundle\GuzzleBundleHeaderForwardPlugin;
+namespace EncoreLabs\Bundle\GuzzleBundleHeaderForwardPlugin;
 
 use EightPoints\Bundle\GuzzleBundle\EightPointsGuzzleBundlePlugin;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;

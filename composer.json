@@ -1,7 +1,7 @@
 {
-    "name": "neirda24/guzzle-bundle-header-forward-plugin",
+    "name": "encore-labs/guzzle-bundle-header-forward-plugin",
     "type": "library",
-    "description": "Guzzle plugin that allow you to forward headers from your current request into the the guzzle one automatically.",
+    "description": "Guzzle plugin that allow you to forward headers from your current request into the the guzzle one automatically. Forked to support Symfony 4",
     "keywords": [
         "middleware",
         "plugin",
@@ -16,13 +16,16 @@
         "header",
         "forward"
     ],
-    "homepage": "https://github.com/Neirda24/GuzzleBundleHeaderForwardPlugin",
+    "homepage": "https://github.com/EncoreLabs/GuzzleBundleHeaderForwardPlugin",
     "license": "MIT",
     "authors": [
         {
             "name": "Adrien Roches",
             "email": "adrien@roc-it.tech",
             "homepage": "https://github.com/Neirda24"
+        },
+        {
+            "name": "Tom Cawthorn"
         },
         {
             "name": "Community",
@@ -33,17 +36,17 @@
         "php": "^7.0",
         "guzzlehttp/guzzle": "^6.0",
         "eightpoints/guzzle-bundle": "~7.0",
-        "symfony/http-kernel": "~2.3|~3.0",
-        "symfony/config": "~2.3|~3.0",
-        "symfony/dependency-injection": "~2.3|~3.0",
-        "symfony/expression-language": "~2.3|~3.0"
+        "symfony/http-kernel": "~4.0",
+        "symfony/config": "~4.0",
+        "symfony/dependency-injection": "~4.0",
+        "symfony/expression-language": "~4.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~6.1"
     },
     "autoload": {
         "psr-4": {
-            "Neirda24\\Bundle\\GuzzleBundleHeaderForwardPlugin\\": "src"
+            "EncoreLabs\\Bundle\\GuzzleBundleHeaderForwardPlugin\\": "src"
         }
     }
 }

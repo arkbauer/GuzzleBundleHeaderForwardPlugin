@@ -42,15 +42,15 @@ class GuzzleForwardHeaderMiddleware
                 return $handler;
             }
 
-            $currentRequest = $this->requestStack->getCurrentRequest();
-
-            foreach ($this->headers as $header) {
-                if ($currentRequest->headers->has($header)) {
-                    $request = $request->withHeader($header, $currentRequest->headers->get($header));
+            if ($currentRequest = $this->requestStack->getCurrentRequest()) {
+                foreach ($this->headers as $header) {
+                    if ($currentRequest->headers->has($header)) {
+                        $request = $request->withHeader($header, $currentRequest->headers->get($header));
+                    }
                 }
-            }
 
-            return $handler($request, $options);
+                return $handler($request, $options);
+            }
         };
     }
 }

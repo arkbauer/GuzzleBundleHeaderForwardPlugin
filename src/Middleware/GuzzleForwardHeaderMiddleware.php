@@ -1,6 +1,6 @@
 <?php
 
-namespace EncoreLabs\Bundle\GuzzleBundleHeaderForwardPlugin;
+namespace EncoreLabs\Bundle\GuzzleBundleHeaderForwardPlugin\Middleware;
 
 use GuzzleHttp\Client;
 use Psr\Http\Message\RequestInterface;

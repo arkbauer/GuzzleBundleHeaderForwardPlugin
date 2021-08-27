@@ -1,5 +1,5 @@
 {
-    "name": "encore-labs/guzzle-bundle-header-forward-plugin",
+    "name": "arkbauer/guzzle-bundle-header-forward-plugin",
     "type": "library",
     "description": "Guzzle plugin that allow you to forward headers from your current request into the the guzzle one automatically. Forked to support Symfony 4",
     "keywords": [
@@ -16,7 +16,7 @@
         "header",
         "forward"
     ],
-    "homepage": "https://github.com/EncoreLabs/GuzzleBundleHeaderForwardPlugin",
+    "homepage": "https://github.com/arkbauer/GuzzleBundleHeaderForwardPlugin",
     "license": "MIT",
     "authors": [
         {

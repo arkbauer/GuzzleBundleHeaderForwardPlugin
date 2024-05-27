@@ -36,7 +36,7 @@
         "php": "^7.1|^8.0|^8.1",
         "guzzlehttp/guzzle": "^6.0",
         "eightpoints/guzzle-bundle": "~8.0",
-        "symfony/http-kernel": "~5.0",
+        "symfony/http-kernel": "~5.0|~6.0|~7.0",
         "symfony/config": "~5.0|~6.0|~7.0",
         "symfony/dependency-injection": "~5.0|~6.0|~7.0",
         "symfony/expression-language": "~5.0|~6.0|~7.0"
